@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #121318;
+  color: #f7f6f6;
+}
+
+.display {
+  font-family: "Arial Narrow", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+}
+
+.flag {
+  display: block;
+  width: 24px;
+  height: 18px;
+  transform: skewX(-13deg);
+  background: conic-gradient(#ff5056 25%, transparent 0 50%, #ff5056 0 75%, transparent 0) 0 0 / 12px 12px;
+}
+
+.panel {
+  background: #1b1c23;
+  border: 1px solid #35353e;
+}
+
+.field-label {
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: #dddde4;
+}
+
+.field,
+.weather-option {
+  background: #23242c;
+  border: 1px solid #40414e;
+}
+
+.field:focus-visible {
+  outline: 2px solid #ff7378;
+  outline-offset: 2px;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 1.1rem;
+  top: 45%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: solid #c0c0cb;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.weather-option:hover {
+  background: #2c2d36;
+}
+
+input:checked + .weather-option {
+  background: #3a262d;
+  border-color: #ff6268;
+  color: #ffb1b4;
+}
+
+.map-panel {
+  background-color: #1e1f27;
+  background-image: radial-gradient(#383944 0.75px, transparent 0.75px);
+  background-size: 14px 14px;
+}
+
+.map-panel .field-label {
+  color: #ff8f93;
+}
+
+.timer {
+  font-variant-numeric: tabular-nums;
+}
+
+nav a {
+  color: #b8b9c4;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: #ff999d;
+}
+
+.feature-card {
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.feature-card:hover,
+.feature-card:focus-visible {
+  background-color: #22232b;
+  border-color: #bd5058;
+}
+
+.feature-art {
+  transition: transform 220ms ease;
+}
+
+.feature-card:hover .feature-art,
+.feature-card:focus-visible .feature-art {
+  transform: scale(1.08);
+}
+
+.probability-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.probability-ring {
+  width: 6rem;
+  aspect-ratio: 1;
+  border: 8px solid #454653;
+  border-top-color: #ff5056;
+  border-right-color: #ff5056;
+  border-radius: 50%;
+  transform: rotate(-25deg);
+}
+
+.probability-lines {
+  display: grid;
+  gap: 0.7rem;
+  width: 5rem;
+}
+
+.probability-lines span {
+  height: 0.35rem;
+  border-radius: 1rem;
+  background: #565765;
+}
+
+.probability-lines span:first-child {
+  width: 70%;
+  background: #ff5056;
+}
+
+.probability-lines span:last-child {
+  width: 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .feature-art {
+    transition: none;
+  }
+
+  .feature-card:hover .feature-art,
+  .feature-card:focus-visible .feature-art {
+    transform: none;
+  }
+}

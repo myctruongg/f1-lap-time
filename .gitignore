@@ -1,63 +1,27 @@
-# Dependencies
+# React and Vite
 node_modules/
-vendor/
+/web/dist/
+
+# Python
 .venv/
 venv/
-env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
 
-# Environment and secrets
+# Local data and trained models
+.cache/
+/artifacts/
+
+# Environment and credentials
 .env
 .env.*
 !.env.example
 *.pem
 *.key
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
-dist/
-build/
-*.egg-info/
-
-# JavaScript and TypeScript
-.npm/
-.yarn/cache/
-.yarn/unplugged/
-.pnpm-store/
-.parcel-cache/
-.next/
-out/
-coverage/
-
-# Logs and temporary files
+# Local tools and OS files
 *.log
-*.tmp
-*.temp
-.cache/
-tmp/
-temp/
-
-# Operating system files
 .DS_Store
-.AppleDouble
-.LSOverride
-Thumbs.db
-Desktop.ini
-ehthumbs.db
-
-# Editors and IDEs
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
-*.swp
-*.swo
-*~
